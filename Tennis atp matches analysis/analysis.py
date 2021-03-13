@@ -2,7 +2,7 @@ import csv
 import io
 from urllib.request import urlopen
 import numpy as np
-from numpy import inf, NINF
+
 matches = []
 for x in range(2012, 2018):
     #Get csv from git using urllib.request
@@ -81,6 +81,6 @@ for surface in list(surfaces)[1:]:
     countedWinners = [{'Player': player, 'Won Matches': winnersPerSurface.count(player)} for player in set(winnersPerSurface)]
     verySpecific.append({'Surface Type': surface, 'Best Players': sorted(countedWinners, key = lambda x: x['Won Matches'], reverse = True)[:3]})
 
-print('\nBest 3 top players that have won a final for each surface type:\n')
+print('\nBest 3 top players for each surface type')
 
 print('\n'.join([str(x) for x in verySpecific]))
