@@ -1,7 +1,6 @@
 import csv
 import io
 from urllib.request import urlopen
-import numpy as np
 
 matches = []
 for x in range(2012, 2018):
